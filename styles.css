@@ -1,0 +1,137 @@
+:root {
+  /* Colors */
+  --color-black: #222;
+  --color-white: #eee;
+  --color-green: rgb(96, 179, 71);
+
+  /* Spacing */
+  --spacing-sm: 8px;
+  --sapcing-md: 16px;
+  --spacing-lg: 32px;
+  --spacing-xl: 64px;
+
+  /* Font */
+  --primary-font: 'Press Start 2P', system-ui;
+
+  /* Font sizes */
+  --font-size-sm: 8px;
+  --font-size-md: 16px;
+  --font-size-lg: 32px;
+  --font-size-xl: 64px;
+}
+
+body {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  font-family: var(--primary-font);
+  height: 100vh;
+}
+
+.btn {
+  font-family: var(--primary-font);
+  transition: all 0.1s ease;
+  height: 50px;
+  width: 150px;
+  font-size: var(--font-size-md);
+}
+
+.btn:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  height: 50%;
+  position: relative;
+}
+
+header p {
+  font-size: calc(var(--font-size-sm) * 1.5);
+}
+
+.title {
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 700px;
+}
+
+h1 {
+  margin: var(--spacing-lg) 0;
+}
+
+.number {
+  height: 100px;
+  width: 150px;
+  background-color: var(--color-white);
+  color: var(--color-black);
+  font-size: var(--font-size-xl);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* -----Main Section----- */
+
+main {
+  margin-top: var(--spacing-xl);
+  display: flex;
+}
+
+.number::before {
+  content: '';
+  height: 10px;
+  width: 100vw;
+  position: absolute;
+  z-index: -1;
+  background-color: var(--color-white);
+}
+
+/* -----Left side----- */
+
+.left-side {
+  width: 50%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.guess {
+  background-color: var(--color-black);
+  border: 3px solid var(--color-white);
+  height: 100px;
+  width: 200px;
+  margin: 0 0 var(--spacing-lg) 0;
+  font-size: var(--font-size-lg);
+  color: var(--color-white);
+  font-family: var(--primary-font);
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.check {
+  display: block;
+  font-size: var(--font-size-md);
+}
+
+/* -----Right side----- */
+.right-side {
+  width: 50%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.message {
+  font-size: calc(var(--font-size-md) + 4px);
+}
